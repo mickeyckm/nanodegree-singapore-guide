@@ -1,9 +1,8 @@
-package ng.cheo.android.singaporeguide;
+package ng.cheo.android.singaporeguide.fragments;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import ng.cheo.android.singaporeguide.models.Item;
+import ng.cheo.android.singaporeguide.R;
+import ng.cheo.android.singaporeguide.models.SubCategory;
+import ng.cheo.android.singaporeguide.SubCategoryActivity;
+import ng.cheo.android.singaporeguide.adapters.SubCategoryAdapter;
 
 /**
  * Created by mickey on 31/10/16.
@@ -46,9 +51,9 @@ public class EatDrinkFragment extends Fragment {
         localItems.add(chickenrice);
 
         final ArrayList<SubCategory> subCategories = new ArrayList<SubCategory>();
-        subCategories.add(new SubCategory("Local Dishes", localItems, R.drawable.local));
-        subCategories.add(new SubCategory("Dining Out", R.drawable.dining));
-        subCategories.add(new SubCategory("Nightlife in the City", R.drawable.party));
+        subCategories.add(new SubCategory(getString(R.string.category_eat_drinks_local_dishes), localItems, R.drawable.local));
+        subCategories.add(new SubCategory(getString(R.string.category_eat_drinks_dining_out), R.drawable.dining));
+        subCategories.add(new SubCategory(getString(R.string.category_eat_drinks_nightlife), R.drawable.party));
         SubCategoryAdapter adapter = new SubCategoryAdapter(getActivity(), subCategories);
 
         ListView listView = (ListView) rootView.findViewById(R.id.category_list);

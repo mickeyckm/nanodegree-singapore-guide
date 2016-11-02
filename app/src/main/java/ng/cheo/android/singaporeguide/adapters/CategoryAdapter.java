@@ -1,9 +1,14 @@
-package ng.cheo.android.singaporeguide;
+package ng.cheo.android.singaporeguide.adapters;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+
+import ng.cheo.android.singaporeguide.R;
+import ng.cheo.android.singaporeguide.fragments.EatDrinkFragment;
+import ng.cheo.android.singaporeguide.fragments.FestivalsEventsFragment;
+import ng.cheo.android.singaporeguide.fragments.SeeDoFragment;
 
 /**
  * Created by mickey on 30/10/16.
@@ -12,12 +17,13 @@ import android.support.v4.app.FragmentPagerAdapter;
 public class CategoryAdapter extends FragmentPagerAdapter {
 
     final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[] { "See & Do", "Festivals & Events", "Eat & Drink" };
+    private String tabTitles[];
     private Context mContext;
 
     public CategoryAdapter(Context context, FragmentManager fragmentManager) {
         super(fragmentManager);
         this.mContext = context;
+        tabTitles = new String[] { mContext.getString(R.string.category_see_do), mContext.getString(R.string.category_festivals_events), mContext.getString(R.string.category_eat_drinks) };
     }
 
     @Override

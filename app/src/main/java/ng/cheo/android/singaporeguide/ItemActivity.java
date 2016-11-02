@@ -1,12 +1,13 @@
 package ng.cheo.android.singaporeguide;
 
 import android.content.Intent;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import ng.cheo.android.singaporeguide.models.Item;
 
 public class ItemActivity extends AppCompatActivity {
 

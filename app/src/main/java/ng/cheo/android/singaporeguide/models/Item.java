@@ -1,8 +1,7 @@
-package ng.cheo.android.singaporeguide;
+package ng.cheo.android.singaporeguide.models;
 
 import android.os.Parcel;
 import android.os.Parcelable;
-import android.util.Log;
 
 /**
  * Created by mickey on 31/10/16.

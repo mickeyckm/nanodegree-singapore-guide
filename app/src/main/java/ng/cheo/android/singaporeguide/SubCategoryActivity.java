@@ -2,17 +2,15 @@ package ng.cheo.android.singaporeguide;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import ng.cheo.android.singaporeguide.adapters.ItemAdapter;
+import ng.cheo.android.singaporeguide.models.Item;
 
 public class SubCategoryActivity extends AppCompatActivity {
 

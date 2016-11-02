@@ -5,6 +5,8 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import ng.cheo.android.singaporeguide.adapters.CategoryAdapter;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

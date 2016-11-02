@@ -1,6 +1,8 @@
-package ng.cheo.android.singaporeguide;
+package ng.cheo.android.singaporeguide.models;
 
 import java.util.ArrayList;
+
+import ng.cheo.android.singaporeguide.models.Item;
 
 /**
  * Created by mickey on 31/10/16.

@@ -1,4 +1,4 @@
-package ng.cheo.android.singaporeguide;
+package ng.cheo.android.singaporeguide.fragments;
 
 import android.content.Intent;
 import android.support.v4.app.Fragment;
@@ -11,6 +11,12 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import ng.cheo.android.singaporeguide.models.Item;
+import ng.cheo.android.singaporeguide.R;
+import ng.cheo.android.singaporeguide.models.SubCategory;
+import ng.cheo.android.singaporeguide.SubCategoryActivity;
+import ng.cheo.android.singaporeguide.adapters.SubCategoryAdapter;
 
 /**
  * Created by mickey on 31/10/16.
@@ -41,10 +47,10 @@ public class FestivalsEventsFragment extends Fragment {
         janToMarEvents.add(riverhongbao);
 
         final ArrayList<SubCategory> subCategories = new ArrayList<SubCategory>();
-        subCategories.add(new SubCategory("Jan to Mar", janToMarEvents, R.drawable.calendar));
-        subCategories.add(new SubCategory("Apr to Jun", R.drawable.calendar));
-        subCategories.add(new SubCategory("Jul to Sep", R.drawable.calendar));
-        subCategories.add(new SubCategory("Oct to Dec", R.drawable.calendar));
+        subCategories.add(new SubCategory(getString(R.string.category_festivals_events_jantomar), janToMarEvents, R.drawable.calendar));
+        subCategories.add(new SubCategory(getString(R.string.category_festivals_events_aprtojun), R.drawable.calendar));
+        subCategories.add(new SubCategory(getString(R.string.category_festivals_events_jultosep), R.drawable.calendar));
+        subCategories.add(new SubCategory(getString(R.string.category_festivals_events_octtodec), R.drawable.calendar));
 
         SubCategoryAdapter adapter = new SubCategoryAdapter(getActivity(), subCategories);
 
