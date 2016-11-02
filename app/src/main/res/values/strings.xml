@@ -1,0 +1,57 @@
+<resources>
+    <string name="title_activity_detail">DetailActivity</string>
+
+    <string name="app_name">Singapore Guide</string>
+
+    <string name="workinprogress">"Work in progress. Come back later"</string>
+
+    <string name="category_see_do">See &amp; Do</string>
+    <string name="category_festivals_events">Festivals &amp; Events</string>
+    <string name="category_eat_drinks">Eat &amp; Drink</string>
+
+    <string name="title_recipe">RECIPE</string>
+    <string name="title_time">TIME</string>
+    <string name="title_address">ADDRESS</string>
+
+    <string name="neighbourhood_littleindia_name">Little India</string>
+    <string name="neighbourhood_littleindia_desc">Little India is a buzzing historic area that shows off the best of Singapore’s Indian community from vibrant culture to incredible shopping.</string>
+    <string name="neighbourhood_littleindia_address">Little India MRT, 60 Bukit Timah Road, Singapore 229900</string>
+
+    <string name="neighbourhood_chinatown_name">Chinatown</string>
+    <string name="neighbourhood_chinatown_desc">Singapore’s historic Chinatown is a bustling mix of old and new, filled with traditional shops and markets as well as cool stores and cafes.</string>
+    <string name="neighbourhood_chinatown_address">Chinatown Visitors Centre, 2 Banda Street, Singapore 059962</string>
+
+    <string name="neighbourhood_marinabay_name">Marina Bay</string>
+    <string name="neighbourhood_marinabay_desc">Marina Bay represents all things modern and super-stylish, from trendy dining destinations to exciting leisure spots.</string>
+    <string name="neighbourhood_marinabay_address">Marina Bay City Gallery, 11 Marina Boulevard, Singapore 018940</string>
+
+    <string name="events_christmas_wonderland_name">Christmas Wonderland</string>
+    <string name="events_christmas_wonderland_desc">It may be summer all year round in Singapore, but Yuletide spirits are in full swing at Garden by the Bay’s Christmas extravaganza.</string>
+    <string name="events_christmas_wonderland_address">Gardens by the Bay, 18 Marina Gardens Drive, Singapore 018953</string>
+    <string name="events_christmas_wonderland_time">12th November to 2nd January</string>
+
+    <string name="events_pongal_name">Pongal (Harvest Festival)</string>
+    <string name="events_pongal_desc">Pongal is a traditional Indian harvest festival that charms with its colourful intimations of an age gone by.</string>
+    <string name="events_pongal_time">12th January</string>
+
+    <string name="events_river_hongbao_name">River Hongbao</string>
+    <string name="events_river_hongbao_desc">Usher in the Chinese New Year at the River Hongbao, a celebration of all things Chinese at Singapore’s iconic Floating Platform @ Marina Bay.</string>
+    <string name="events_river_hongbao_address">Floating Platform @ Marina Bay, Singapore</string>
+    <string name="events_river_hongbao_time">6th February to 14th February</string>
+
+    <string name="local_laksa_name">Laksa</string>
+    <string name="local_laksa_desc">The laksa broth offers the right balance of spice and coconut milk, a distinctive noodle soup that will tickle the tastebuds.</string>
+    <string name="local_laksa_recipe">Add the prawns to the laksa, turn off the heat and allow to gently poach for 2 to 3 minutes until cooked through. To serve, divide the noodles and prawns among bowls. Ladle over the broth and top with chicken, bean sprouts, spring onions, chilli, coriander, fried shallots and lime wedges.</string>
+
+    <string name="local_chillicrab_name">Chilli Crab</string>
+    <string name="local_chillicrab_desc">Chilli crab hits all the right spots with tangy gravy that seeps into the succulent flesh of the stir-fried crab.</string>
+    <string name="local_chillicrab_recipe">Set aside. Heat the oil in a wok over medium-low heat and add the shallots, garlic, ginger and chilies. Stir-fry until fragrant, about 3 minutes, then add the Chili-Ginger Sauce, chicken stock, hot bean paste, chili sauce, tomato sauce, sugar, rice wine, salt and pepper.</string>
+
+    <string name="local_kayatoast_name">Kaya Toast</string>
+    <string name="local_kayatoast_desc">This simple dish is the ultimate comfort food for those with a sweet tooth, offering the right mix of crunch and sugar rush.</string>
+    <string name="local_kayatoast_recipe">Toast your bread so it has some color, no light, barely toasted pieces of bread please! Spread on a thick layer of salted butter and top with a generous amount of kaya. Top with another slice of buttered toast (yes, butter both slices) and dip into a soft boiled egg seasoned with dark soy and white pepper, if desired.</string>
+
+    <string name="local_chickenrice_name">Chicken Rice</string>
+    <string name="local_chickenrice_desc">This delectable dish can be found at almost every dining spot, from humble hawker centres to high-end restaurants.</string>
+    <string name="local_chickenrice_recipe">While the chicken is cooking, heat the vegetable oil and 1 tablespoon of sesame oil in a large saucepan over medium heat. Fry the shallots, ginger, and garlic in the oil until fragrant. Add cilantro and rice, and cook, stirring until toasted. Pour in chicken stock and season with salt.</string>
+</resources>
