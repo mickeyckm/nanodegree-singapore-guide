@@ -13,6 +13,7 @@ public class Item implements Parcelable {
     private String mDesc;
     private String mRecipe;
     private String mTime;
+    private String mOpeningHours;
     private String mAddress;
     private int mImageResourceId = NO_IMAGE_PROVIDED;
 
@@ -27,6 +28,7 @@ public class Item implements Parcelable {
         mDesc = description;
         mRecipe = "";
         mTime = "";
+        mOpeningHours = "";
         mAddress = "";
     }
 
@@ -36,6 +38,7 @@ public class Item implements Parcelable {
         mImageResourceId = imageResourceId;
         mRecipe = "";
         mTime = "";
+        mOpeningHours = "";
         mAddress = "";
     }
 
@@ -75,6 +78,18 @@ public class Item implements Parcelable {
         return !mTime.equals("");
     }
 
+    public String getOpeningHours() {
+        return mOpeningHours;
+    }
+
+    public void setOpeningHours(String openingHours) {
+        mOpeningHours = openingHours;
+    }
+
+    public Boolean hasOpeningHours() {
+        return !mOpeningHours.equals("");
+    }
+
     public String getAddress() {
         return mAddress;
     }
@@ -104,6 +119,7 @@ public class Item implements Parcelable {
         dest.writeInt(mImageResourceId);
         dest.writeString(mRecipe);
         dest.writeString(mTime);
+        dest.writeString(mOpeningHours);
         dest.writeString(mAddress);
 
     }
@@ -114,8 +130,9 @@ public class Item implements Parcelable {
         mDesc = in.readString();
         mImageResourceId = in.readInt();
         mRecipe = in.readString();
-        mAddress = in.readString();
         mTime = in.readString();
+        mOpeningHours = in.readString();
+        mAddress = in.readString();
 
     }
 

@@ -25,10 +25,55 @@ import ng.cheo.android.singaporeguide.adapters.SubCategoryAdapter;
 public class SeeDoFragment extends Fragment {
 
     private ArrayList<Item> neighbourhoodsItems;
+    private ArrayList<Item> artsItems;
+    private ArrayList<Item> historicalItems;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.category_list, container, false);
+
+        // Load data
+        loadContents();
+
+        final ArrayList<SubCategory> subCategories = new ArrayList<SubCategory>();
+        subCategories.add(new SubCategory(getString(R.string.category_see_do_neighbourhood), neighbourhoodsItems, R.drawable.neighbourhood));
+        subCategories.add(new SubCategory(getString(R.string.category_see_do_arts), artsItems, R.drawable.arts));
+        subCategories.add(new SubCategory(getString(R.string.category_see_do_history), historicalItems, R.drawable.history));
+        subCategories.add(new SubCategory(getString(R.string.category_see_do_architecture), R.drawable.architecture));
+        subCategories.add(new SubCategory(getString(R.string.category_see_do_culture), R.drawable.culture));
+        subCategories.add(new SubCategory(getString(R.string.category_see_do_recreation), R.drawable.recreation));
+        subCategories.add(new SubCategory(getString(R.string.category_see_do_nature), R.drawable.wildlife));
+
+        SubCategoryAdapter adapter = new SubCategoryAdapter(getActivity(), subCategories);
+
+        ListView listView = (ListView) rootView.findViewById(R.id.category_list);
+        listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SubCategory subCategory = subCategories.get(position);
+                if (subCategory.hasItems()) {
+                    Intent subCategoryIntent = new Intent(getActivity(), SubCategoryActivity.class);
+                    subCategoryIntent.putExtra(getString(R.string.extra_title), subCategory.getName());
+                    subCategoryIntent.putExtra(getString(R.string.extra_items), subCategory.getItems());
+                    startActivity(subCategoryIntent);
+                }
+                else {
+                    CharSequence text = getString(R.string.workinprogress);
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toast = Toast.makeText(getActivity(), text, duration);
+                    toast.show();
+                }
+            }
+        });
+
+        return listView;
+    }
+
+    private void loadContents() {
+
+        // Neighbourhoods data
 
         neighbourhoodsItems = new ArrayList<Item>();
 
@@ -48,39 +93,42 @@ public class SeeDoFragment extends Fragment {
         kampongglam.setAddress(getString(R.string.neighbourhood_kampongglam_address));
         neighbourhoodsItems.add(kampongglam);
 
-        final ArrayList<SubCategory> subCategories = new ArrayList<SubCategory>();
-        subCategories.add(new SubCategory(getString(R.string.category_see_do_neighbourhood), neighbourhoodsItems, R.drawable.neighbourhood));
-        subCategories.add(new SubCategory(getString(R.string.category_see_do_arts), R.drawable.arts));
-        subCategories.add(new SubCategory(getString(R.string.category_see_do_history), R.drawable.history));
-        subCategories.add(new SubCategory(getString(R.string.category_see_do_architecture), R.drawable.architecture));
-        subCategories.add(new SubCategory(getString(R.string.category_see_do_culture), R.drawable.culture));
-        subCategories.add(new SubCategory(getString(R.string.category_see_do_recreation), R.drawable.recreation));
-        subCategories.add(new SubCategory(getString(R.string.category_see_do_nature), R.drawable.wildlife));
+        // Arts data
 
-        SubCategoryAdapter adapter = new SubCategoryAdapter(getActivity(), subCategories);
+        artsItems = new ArrayList<Item>();
 
-        ListView listView = (ListView) rootView.findViewById(R.id.category_list);
-        listView.setAdapter(adapter);
+        Item esplanade = new Item(getString(R.string.arts_esplanade_name), getString(R.string.arts_esplanade_desc), R.raw.esplanade);
+        esplanade.setAddress(getString(R.string.arts_esplanade_address));
+        esplanade.setOpeningHours(getString(R.string.arts_esplanade_opening_hours));
+        artsItems.add(esplanade);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                SubCategory subCategory = subCategories.get(position);
-                if (subCategory.hasItems()) {
-                    Intent subCategoryIntent = new Intent(getActivity(), SubCategoryActivity.class);
-                    subCategoryIntent.putExtra("title", subCategory.getName());
-                    subCategoryIntent.putExtra("items", subCategory.getItems());
-                    startActivity(subCategoryIntent);
-                }
-                else {
-                    CharSequence text = getString(R.string.workinprogress);
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toast = Toast.makeText(getActivity(), text, duration);
-                    toast.show();
-                }
-            }
-        });
+        Item gillman = new Item(getString(R.string.arts_gillman_name), getString(R.string.arts_gillman_desc), R.raw.gillman);
+        gillman.setAddress(getString(R.string.arts_gillman_address));
+        gillman.setOpeningHours(getString(R.string.arts_gillman_opening_hours));
+        artsItems.add(gillman);
 
-        return listView;
+        Item reddot = new Item(getString(R.string.arts_reddot_name), getString(R.string.arts_reddot_desc), R.raw.reddot);
+        reddot.setAddress(getString(R.string.arts_reddot_address));
+        reddot.setOpeningHours(getString(R.string.arts_reddot_opening_hours));
+        artsItems.add(reddot);
+
+        // History data
+
+        historicalItems = new ArrayList<Item>();
+
+        Item asianCiv = new Item(getString(R.string.history_asian_name), getString(R.string.history_asian_desc), R.raw.asianciv);
+        asianCiv.setAddress(getString(R.string.history_asian_address));
+        asianCiv.setOpeningHours(getString(R.string.history_asian_opening_hours));
+        historicalItems.add(asianCiv);
+
+        Item nationalMuseum = new Item(getString(R.string.history_national_name), getString(R.string.history_national_desc), R.raw.nationalmuseum);
+        nationalMuseum.setAddress(getString(R.string.history_national_address));
+        nationalMuseum.setOpeningHours(getString(R.string.history_national_opening_hours));
+        historicalItems.add(nationalMuseum);
+
+        Item civWar = new Item(getString(R.string.history_civilianwar_name), getString(R.string.history_civilianwar_desc), R.raw.civwar);
+        civWar.setAddress(getString(R.string.history_civilianwar_address));
+        civWar.setOpeningHours(getString(R.string.history_civilianwar_opening_hours));
+        historicalItems.add(civWar);
     }
 }

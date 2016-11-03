@@ -5,6 +5,10 @@
 
     <string name="workinprogress">"Work in progress. Come back later"</string>
 
+    <string name="extra_title">title</string>
+    <string name="extra_item">item</string>
+    <string name="extra_items">items</string>
+
     <string name="category_see_do">See &amp; Do</string>
     <string name="category_see_do_neighbourhood">Neighbourhood</string>
     <string name="category_see_do_arts">Arts</string>
@@ -28,8 +32,7 @@
     <string name="title_recipe">RECIPE</string>
     <string name="title_time">TIME</string>
     <string name="title_address">ADDRESS</string>
-
-
+    <string name="title_opening_hours">OPENING HOURS</string>
 
     <string name="neighbourhood_littleindia_name">Little India</string>
     <string name="neighbourhood_littleindia_desc">Little India is a buzzing historic area that shows off the best of Singapore’s Indian community from vibrant culture to incredible shopping.</string>
@@ -46,6 +49,36 @@
     <string name="neighbourhood_kampongglam_name">Kampong Glam</string>
     <string name="neighbourhood_kampongglam_desc">Discover Kampong Glam rich history, living traditions, excellent eateries and trendy shops in this vibrant neighbourhood.</string>
     <string name="neighbourhood_kampongglam_address">Sultan Mosque, 3 Muscat Street, Singapore 198833</string>
+
+    <string name="arts_esplanade_name">Esplanade - Theatres on the Bay</string>
+    <string name="arts_esplanade_desc">Catch a non-stop line-up of world-class performances at Singapore Premier Arts Centre</string>
+    <string name="arts_esplanade_opening_hours">Daily, 12pm-8:30pm</string>
+    <string name="arts_esplanade_address">1 Esplanade Drive, Singapore 038981</string>
+
+    <string name="arts_gillman_name">Gillman Barracks</string>
+    <string name="arts_gillman_desc">A former British military camp is now Asia New Destination for Contemporary Art</string>
+    <string name="arts_gillman_opening_hours">Tue to Sat, 11am-7pm. Sun, 11am-6pm</string>
+    <string name="arts_gillman_address">9 Lock Road, Singapore 108937</string>
+
+    <string name="arts_reddot_name">Red Dot Design Museum</string>
+    <string name="arts_reddot_desc">This museum holds more than 1,000 award-winning products, communications and concepts that will delight design fans. </string>
+    <string name="arts_reddot_address">28 Maxwell Road Red Dot Traffic, Singapore 069120</string>
+    <string name="arts_reddot_opening_hours">Mon-Fri, 11am-6pm. Sat &amp; Sun, 11am-8pm.</string>
+
+    <string name="history_asian_name">Asian Civilisations Museum</string>
+    <string name="history_asian_desc">This museum tells the stories of Asian civilisations through its permanent collections.</string>
+    <string name="history_asian_address">1 Empress Place, Singapore 179555</string>
+    <string name="history_asian_opening_hours">Sat-Thu, 10am-7pm. Fri, 10am-9pm</string>
+
+    <string name="history_national_name">National Museum of Singapore</string>
+    <string name="history_national_desc">Singapore oldest museum is a progressive shocase of the country history and culture</string>
+    <string name="history_national_address">93 Stamford Road, Singapore 178897</string>
+    <string name="history_national_opening_hours">Daily, 10am-8pm</string>
+
+    <string name="history_civilianwar_name">Civilian War Memorial</string>
+    <string name="history_civilianwar_desc">This memorial commemorates civilian victims of the Japanese Occupation in Singapore.</string>
+    <string name="history_civilianwar_address">Intersection of Bras Basah Road and Beach Road, Singapore 189701</string>
+    <string name="history_civilianwar_opening_hours">Daily</string>
 
     <string name="events_christmas_wonderland_name">Christmas Wonderland</string>
     <string name="events_christmas_wonderland_desc">It may be summer all year round in Singapore, but Yuletide spirits are in full swing at Garden by the Bay’s Christmas extravaganza.</string>

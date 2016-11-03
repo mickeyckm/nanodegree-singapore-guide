@@ -20,9 +20,9 @@ public class SubCategoryActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
 
         Intent intent = getIntent();
-        setTitle(intent.getStringExtra("title"));
+        setTitle(intent.getStringExtra(getString(R.string.extra_title)));
 
-        final ArrayList<Item> items = intent.getParcelableArrayListExtra("items");
+        final ArrayList<Item> items = intent.getParcelableArrayListExtra(getString(R.string.extra_items));
 
         ItemAdapter adapter = new ItemAdapter(SubCategoryActivity.this, items);
 

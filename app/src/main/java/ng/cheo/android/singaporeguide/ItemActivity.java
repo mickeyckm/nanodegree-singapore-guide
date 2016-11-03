@@ -17,7 +17,7 @@ public class ItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_item);
 
         Intent intent = getIntent();
-        Item item = intent.getParcelableExtra("item");
+        Item item = intent.getParcelableExtra(getString(R.string.extra_item));
         setTitle(item.getName());
 
         ImageView imageView = (ImageView) findViewById(R.id.image);
@@ -34,6 +34,17 @@ public class ItemActivity extends AppCompatActivity {
             TextView timeTextView = (TextView) findViewById(R.id.time);
             timeTextView.setText(item.getTime());
             timeTextView.setVisibility(View.VISIBLE);
+
+        }
+
+        if (item.hasOpeningHours()) {
+
+            TextView openingHoursTitleTextView = (TextView) findViewById(R.id.opening_hours_title);
+            openingHoursTitleTextView.setVisibility(View.VISIBLE);
+
+            TextView openingHoursTextView = (TextView) findViewById(R.id.opening_hours);
+            openingHoursTextView.setText(item.getOpeningHours());
+            openingHoursTextView.setVisibility(View.VISIBLE);
 
         }
 

@@ -46,6 +46,28 @@
             android:visibility="gone" />
 
         <TextView
+            android:id="@+id/opening_hours_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="8dp"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="@string/title_opening_hours"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/opening_hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:visibility="gone" />
+
+        <TextView
             android:id="@+id/address_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

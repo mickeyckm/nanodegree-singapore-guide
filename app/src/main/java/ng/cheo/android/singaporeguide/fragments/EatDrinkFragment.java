@@ -65,8 +65,8 @@ public class EatDrinkFragment extends Fragment {
                 SubCategory subCategory = subCategories.get(position);
                 if (subCategory.hasItems()) {
                     Intent subCategoryIntent = new Intent(getActivity(), SubCategoryActivity.class);
-                    subCategoryIntent.putExtra("title", subCategory.getName());
-                    subCategoryIntent.putExtra("items", subCategory.getItems());
+                    subCategoryIntent.putExtra(getString(R.string.extra_title), subCategory.getName());
+                    subCategoryIntent.putExtra(getString(R.string.extra_items), subCategory.getItems());
                     startActivity(subCategoryIntent);
                 }
                 else {
