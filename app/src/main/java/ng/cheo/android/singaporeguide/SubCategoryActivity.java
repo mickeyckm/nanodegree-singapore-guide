@@ -34,7 +34,7 @@ public class SubCategoryActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Item item = items.get(position);
                 Intent itemIntent = new Intent(SubCategoryActivity.this, ItemActivity.class);
-                itemIntent.putExtra("item", item);
+                itemIntent.putExtra(getString(R.string.extra_item), item);
                 startActivity(itemIntent);
             }
         });
